@@ -1,0 +1,11 @@
+{
+  "words": [
+    "Money",
+    "*Money",
+    "@USDT",
+    "@*Money"
+  ],
+  "same_four": true,
+  "same_five": true,
+  "same_six": true
+}
