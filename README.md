@@ -11,7 +11,7 @@ Optimized for maximum throughput using hybrid CPU processing.
 | ----------------------- | -------------------- | ------------- |
 | **AMD EPYC**            | **2,000,000 addr/s** | 1,000,000     |
 | **AMD Ryzen 9 7950X3D** | **1,000,000 addr/s** | 200,000       |
-| **Ryzen 7 9800X3D**     | **490,000 addr/s**   | 100,000       |
+| **AMD Ryzen 7 9800X3D** | **490,000 addr/s**   | 100,000       |
 
 ---
 
@@ -19,6 +19,23 @@ Optimized for maximum throughput using hybrid CPU processing.
 
 ```bash
 cargo run --release
+```
+
+---
+
+## 📝 Output Format (Results Saved)
+
+All successful matches are saved into **`r_nice.txt`** 🗂️
+Each result is written in the following format:
+
+```
+TRX Address | Pattern | Private Key
+```
+
+Example:
+
+```
+TXY4USDTxxxx | @*USDT | 7f3a1d9b0c...
 ```
 
 ---
@@ -32,8 +49,8 @@ All patterns are configured inside **`patterns.json`**.
 #### 🔁 Same-character endings:
 
 ```json
-"same_four": true    // 4 identical characters at the end
-"same_five": true    // 5 identical characters at the end
+"same_four": true,   // 4 identical characters at the end
+"same_five": true,   // 5 identical characters at the end
 "same_six": true     // 6 identical characters at the end
 ```
 
@@ -42,20 +59,18 @@ All patterns are configured inside **`patterns.json`**.
 ```json
 "words": [
     "USDT",     // strict uppercase match
-    "*USDT",    // case-insensitive (Usdt, uSdT, etc.)
-    "@USDT",    // strict uppercase, must follow digit or vowel (beautiful readable layout)
+    "*USDT",    // case-insensitive
+    "@USDT",    // strict uppercase, must follow digit or vowel
     "@*USDT"    // case-insensitive, must follow digit or vowel
 ]
 ```
 
 **Legend:**
 
-* `WORD` → match in exact case
-* `*WORD` → match in any letter-case
-* `@WORD` → match only if before the word is a **digit or vowel**
-* `@*WORD` → both of the above combined
-
-Perfect for finding beautifully readable TRX vanity addresses 😎
+* `WORD` → exact-case match
+* `*WORD` → any letter-case
+* `@WORD` → digit/vowel before the word
+* `@*WORD` → both combined
 
 ---
 
@@ -69,20 +84,17 @@ Edit **`src/hybrid.rs`**:
 const BATCH_SIZE: usize = 100_000;
 ```
 
-### 🧪 Tip
-
-Different CPUs have different optimal batch sizes.
-Run benchmarks to find the sweet spot for your hardware.
+Different hardware benefits from different batch sizes — experiment to find the optimal value.
 
 ---
 
 ## ⭐ Features
 
-* 🔥 Extremely fast TRON vanity generation
-* 🧵 Multi-threaded hybrid search
-* 📝 Flexible pattern system
-* 🧩 Supports wildcards and semantic prefixes
-* 🏎️ Fully optimized Rust performance
+* 🔥 Ultra-fast TRON vanity generation
+* 🧵 Multi-threaded hybrid engine
+* 🎚️ Pattern-based filtering
+* 🔡 Wildcards & semantic prefixes
+* 🏎️ Rust-level performance
 
 ---
 
