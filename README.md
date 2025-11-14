@@ -99,11 +99,3 @@ Pull requests and improvements are welcome!
 ## 📄 License
 
 MIT License © 2025
-
----
-
-If you want, I can also:
-✅ generate a logo/banner for the repo
-✅ build a full GitHub project structure
-✅ generate patterns.json example
-Just say the word!
