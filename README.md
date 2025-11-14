@@ -35,7 +35,7 @@ TRX Address | Pattern | Private Key
 Example:
 
 ```
-TXY4USDTxxxx | @*USDT | 7f3a1d9b0c...
+TXY4......5USDT | @*USDT | 7f3a1d9b0c...
 ```
 
 ---
