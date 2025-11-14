@@ -1,7 +1,3 @@
-Here is a clean, polished, GitHub-ready **README.md** with emojis, formatted beautifully and professionally:
-
----
-
 # ⚡ Fastest TRON Vanity Generator (Rust)
 
 A blazing-fast **TRX Vanity Address Generator** written in Rust 🚀
