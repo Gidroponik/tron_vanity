@@ -12,7 +12,7 @@ Optimized for maximum throughput using hybrid CPU processing.
 | **AMD EPYC 9454P 48**            | **2,000,000 addr/s** | 1,000,000     |
 | **AMD Ryzen 9 7950X3D** | **1,000,000 addr/s** | 200,000       |
 | **AMD Ryzen 7 9800X3D** | **490,000 addr/s**   | 100,000       |
-
+| **AMD Ryzen 7 7800X3D** | **360,000 addr/s**   | 100,000       |
 ---
 
 ## ▶️ Run
